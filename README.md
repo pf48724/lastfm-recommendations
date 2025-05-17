@@ -4,4 +4,4 @@ Generates music recommendations using machine learning based on your Last.fm lis
 
 Don't have a Last.fm account? Try it with the username `reallycheesy`.
 
-[Try Here](https://lastfm-recommendations.onrender.com)
+[Try Here](lastfmrecs.up.railway.app)
