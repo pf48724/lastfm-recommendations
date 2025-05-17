@@ -114,7 +114,7 @@ def get_new_tracks_from_lastfm(top_tracks):
     top_tags = [tag for tag, count in sorted_tags[:10]]
     candidate_tracks = []
     for tag in top_tags:
-        tag_tracks = get_tracks_for_tag(tag, api_get_tracks_by_tag, limit=50)
+        tag_tracks = get_tracks_for_tag(tag, api_get_tracks_by_tag, limit=20)
         if tag_tracks:
             candidate_tracks.extend(tag_tracks)
             logger.info(f"Added {len(tag_tracks)} tracks from tag '{tag}'")
@@ -129,7 +129,7 @@ def get_new_tracks_from_lastfm(top_tracks):
             unique_similar_tracks.append(track)
     results = []
     for top_track in top_tracks:
-        vector_similar = find_similar_tracks_vector(top_track, unique_similar_tracks, num_similar=3)
+        vector_similar = find_similar_tracks_vector(top_track, unique_similar_tracks, num_similar=2)
         results.extend(vector_similar)
     seen = set()
     deduped = []
