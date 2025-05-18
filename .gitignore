@@ -26,3 +26,4 @@ coverage.xml
 build/
 dist/
 tag_tracks_cache.json
+.cache
